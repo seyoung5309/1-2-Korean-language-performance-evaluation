@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생성형 AI 콘텐츠, 어떻게 사용되고 있을까? 학습 도구인가 창의력 위협인가? 청소년의 생각을 듣다</title>
+    <!-- Tailwind CSS CDN 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN 로드 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts - Noto Sans KR 로드 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 기본 폰트 및 배경색 설정 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #F4F7F9; /* Light Background */
             color: #263238; /* Dark Text */
         }
+        /* 컨테이너 최대 너비 설정 */
         .container {
             max-width: 1200px;
         }
+        /* 헤더 배경색 설정 */
         .header-bg {
             background-color: #2A62B6; /* Primary Blue */
         }
+        /* 섹션 제목 색상 설정 */
         .section-title {
             color: #2A62B6; /* Primary Blue */
         }
+        /* 카드 스타일 설정 (배경, 그림자, 테두리 반경) */
         .card {
             background-color: #FFFFFF; /* Light Background - Card */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 0.5rem;
         }
-        .card1 {
-        background-color: #FFFFFF; /* Light Background - Card */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 0.5rem;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        }
+        /* 차트 컨테이너 반응형 높이 설정 */
         .chart-container {
             position: relative;
             width: 100%;
@@ -56,26 +57,33 @@
                 max-height: 450px;
             }
         }
+        /* 큰 통계 숫자 색상 설정 */
         .big-stat-number {
             color: #2A62B6; /* Primary Blue */
         }
+        /* 강조 색상 설정 */
         .accent-color {
             color: #4ECDC4; /* Secondary Teal */
         }
+        /* 정보 텍스트 줄 간격 설정 */
         .info-text {
             line-height: 1.6;
         }
     </style>
 </head>
 <body>
+    <!-- 헤더 섹션 시작 -->
     <header class="header-bg py-8 text-white text-center shadow-lg">
         <h1 class="text-4xl font-bold mb-2">생성형 AI 콘텐츠, 어떻게 사용되고 있을까?</h1>
         <h2 class="text-2xl font-semibold mb-4">학습 도구인가 창의력 위협인가? 청소년의 생각을 듣다</h2>
         <p class="text-lg">미림마이스터고등학교 뉴미디어소프트웨어과 1학년 2반 공동 조사 보고서</p>
         <p class="text-sm mt-1">조사 기간: 2025년 5월 14일 ~ 5월 15일 | 조사 대상: 1학년 2반 학생 17명</p>
     </header>
+    <!-- 헤더 섹션 끝 -->
 
+    <!-- 메인 콘텐츠 시작 -->
     <main class="container mx-auto px-4 py-12">
+        <!-- 1. 조사 동기와 목적 섹션 -->
         <section id="introduction" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">1. 조사 동기와 목적</h2>
             <div class="grid md:grid-cols-2 gap-8">
@@ -89,7 +97,9 @@
                 </div>
             </div>
         </section>
+        <!-- 1. 조사 동기와 목적 섹션 끝 -->
 
+        <!-- 2. 조사 계획 및 방법 섹션 -->
         <section id="methodology" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">2. 조사 계획 및 방법</h2>
             <div class="card p-6">
@@ -120,7 +130,9 @@
                 </div>
             </div>
         </section>
+        <!-- 2. 조사 계획 및 방법 섹션 끝 -->
 
+        <!-- 3. 조사 결과: 설문조사 섹션 -->
         <section id="survey-results" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">3. 조사 결과: 설문조사</h2>
             <p class="info-text text-center mb-8">생성형 AI 사용 빈도, 학습 도움 여부, 신뢰도 및 할루시네이션 인지 등 핵심 지표를 통해 학생들의 AI 활용 실태를 파악했다.</p>
@@ -159,7 +171,9 @@
                 </div>
             </div>
         </section>
+        <!-- 3. 조사 결과: 설문조사 섹션 끝 -->
 
+        <!-- 3. 조사 결과: 심층 인터뷰 섹션 -->
         <section id="interview-results" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">3. 조사 결과: 심층 인터뷰</h2>
             <p class="info-text text-center mb-8">설문조사만으로는 알 수 없었던 학생들의 생성형 AI에 대한 깊이 있는 생각과 우려를 인터뷰를 통해 확인했다.</p>
@@ -175,27 +189,31 @@
                     <p class="info-text">김민채 학생은 AI가 정보를 빠르고 쉽게 제공하여 <span class="font-bold">학습 효율을 높이는 데 큰 도움</span>을 주었다고 평가했다. 하지만 AI가 인간의 사고와 경험에 기반한 결과물에 불과하며, <span class="font-bold">인간의 창의성과 감성을 완전히 대체할 수 없다</span>고 강조했다.</p>
                     <p class="info-text mt-3">AI 반복 사용이 인간의 <span class="font-bold">사고력과 창의성을 약화</span>시킬 수 있으며, 창작 활동에서의 AI 사용은 <span class="font-bold">공정성과 창의성 훼손</span> 문제를 야기할 수 있다고 우려했다. 편향된 AI가 <span class="font-bold">사회적 갈등을 심화</span>시킬 수 있어 윤리적 통제와 기준 마련이 필요하다고 역설했다.</p>
                 </div>
-                 <div class = "card p-6">
-                    <img src="src/스크린샷 2025-06-05 154711.png" alt= "민서연 학생 인터뷰 사진">
+                <!-- 이미지 경로 수정: placehold.co를 사용한 임시 플레이스홀더 이미지 -->
+                <div class="card p-6 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/A9A9A9/FFFFFF?text=Minseoyeon+Student" alt="민서연 학생 인터뷰 사진" class="rounded-lg">
                 </div>
-                <div class = "card p-6">
-                    <img src="src/스크린샷 2025-06-05 154738.png" alt="김민채 학생 인터뷰 사진">
+                <div class="card p-6 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/A9A9A9/FFFFFF?text=Minchae+Student" alt="김민채 학생 인터뷰 사진" class="rounded-lg">
                 </div>
-                <div class = "card p-6">
-                    <img src="src/KakaoTalk_20250609_105929176.png" alt="민서연 학생 워크스페이스"  height="350">
+                <div class="card p-6 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/A9A9A9/FFFFFF?text=Minseoyeon+Workspace" alt="민서연 학생 워크스페이스" class="rounded-lg">
                 </div>
-                <div class = "card p-6">
-                    <img src="src/KakaoTalk_20250609_105929176_01.png" alt="김민채 학생 워크스페이스"  height="350">
+                <div class="card p-6 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/A9A9A9/FFFFFF?text=Minchae+Workspace" alt="김민채 학생 워크스페이스" class="rounded-lg">
                 </div>
             </div>
             <br>
             <br>
             <h2 class="text-3xl font-bold section-title text-center mb-6"> -종합적인 워크스페이스- </h2>
-            <div class = "card1 p-6">
-                <img src ="src/스크린샷 2025-06-05 153735.png" alt = "워크스페이스" width="500" height="350">
+            <div class="card p-6 flex justify-center items-center">
+                <!-- 이미지 경로 수정: placehold.co를 사용한 임시 플레이스홀더 이미지 -->
+                <img src="https://placehold.co/500x350/A9A9A9/FFFFFF?text=Overall+Workspace" alt="워크스페이스" class="rounded-lg">
             </div>
         </section>
+        <!-- 3. 조사 결과: 심층 인터뷰 섹션 끝 -->
 
+        <!-- 4. 결론 및 제언 섹션 -->
         <section id="conclusion" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">4. 결론 및 제언</h2>
             <p class="info-text text-center mb-8">이번 조사를 통해 생성형 AI에 대한 학생들의 높은 활용률과 더불어 균형 잡힌 인식, 즉 장점과 한계를 모두 인지하고 윤리적 활용에 대한 고민을 하고 있음을 확인했다.</p>
@@ -219,7 +237,9 @@
                 <p class="info-text mt-4 text-center font-bold">우리 반은 AI의 장점을 현명하게 활용하고, 동시에 인간 고유의 가치를 지키며 AI와 조화롭게 공존하는 현명한 사용자로 성장할 것을 다짐한다.</p>
             </div>
         </section>
+        <!-- 4. 결론 및 제언 섹션 끝 -->
 
+        <!-- 5. 추가 참고자료 섹션 -->
         <section id="references" class="mb-12">
             <h2 class="text-3xl font-bold section-title text-center mb-6">5. 추가 참고자료</h2>
             <div class="card p-6">
@@ -229,54 +249,70 @@
                 </ul>
             </div>
         </section>
+        <!-- 5. 추가 참고자료 섹션 끝 -->
     </main>
+    <!-- 메인 콘텐츠 끝 -->
 
+    <!-- 푸터 섹션 시작 -->
     <footer class="bg-[#263238] text-white text-center py-6 text-sm">
         <p>&copy; 2025 미림마이스터고등학교 뉴미디어소프트웨어과 1학년 2반 공동 조사</p>
         <p>본 인포그래픽은 제공된 보고서 내용을 바탕으로 제작되었다.</p>
     </footer>
+    <!-- 푸터 섹션 끝 -->
 
     <script>
-        // TypeScript converted to JavaScript
-        const chartColorsProfessional = ['#2A62B6', '#4ECDC4', '#A9A9A9', '#E0F2FE', '#263238', '#607D8B']; // Professional & Clear palette
+        // 차트 색상 팔레트 정의 (전문적이고 명확한 색상)
+        const chartColorsProfessional = ['#2A62B6', '#4ECDC4', '#A9A9A9', '#E0F2FE', '#263238', '#607D8B'];
 
+        /**
+         * 긴 차트 레이블을 여러 줄로 나누는 함수
+         * @param {string} label - 처리할 차트 레이블 문자열
+         * @returns {string|string[]} - 처리된 레이블 (단일 문자열 또는 문자열 배열)
+         */
         function processChartLabel(label) {
+            // 레이블이 문자열이고 길이가 16자를 초과할 경우에만 처리
             if (typeof label === 'string' && label.length > 16) {
-                const words = label.split(' ');
-                const lines = [];
-                let currentLine = '';
+                const words = label.split(' '); // 공백 기준으로 단어 분리
+                const lines = []; // 여러 줄을 저장할 배열
+                let currentLine = ''; // 현재 줄에 추가할 단어들을 저장
+
+                // 각 단어를 순회하며 줄 길이 조절
                 for (const word of words) {
+                    // 현재 줄에 단어를 추가했을 때 16자를 초과하고, 현재 줄에 이미 내용이 있다면
                     if ((currentLine + word).length > 16 && currentLine.length > 0) {
-                        lines.push(currentLine.trim());
-                        currentLine = word + ' ';
+                        lines.push(currentLine.trim()); // 현재 줄을 배열에 추가하고 양쪽 공백 제거
+                        currentLine = word + ' '; // 다음 줄은 현재 단어로 시작
                     } else {
-                        currentLine += word + ' ';
+                        currentLine += word + ' '; // 현재 줄에 단어 추가
                     }
                 }
-                lines.push(currentLine.trim());
-                return lines;
+                lines.push(currentLine.trim()); // 마지막 줄을 배열에 추가
+                return lines; // 여러 줄로 나뉜 배열 반환
             }
-            return label;
+            return label; // 16자 미만이거나 문자열이 아니면 원본 레이블 반환
         }
 
+        // 모든 차트에 공통으로 적용될 옵션 정의
         const commonChartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
+            responsive: true, // 컨테이너 크기에 따라 차트 크기 조절
+            maintainAspectRatio: false, // 차트의 종횡비 유지 안 함 (height, width를 직접 제어 가능)
             plugins: {
                 legend: {
-                    position: 'bottom',
+                    position: 'bottom', // 범례 위치
                     labels: {
-                        font: { size: 12 },
-                        padding: 15,
-                        usePointStyle: true,
-                        boxWidth: 8
+                        font: { size: 12 }, // 범례 폰트 크기
+                        padding: 15, // 범례 항목 간 패딩
+                        usePointStyle: true, // 범례 마커를 점 스타일로 사용
+                        boxWidth: 8 // 범례 마커의 너비
                     }
                 },
                 tooltip: {
                     callbacks: {
+                        // 툴팁 제목 콜백 (긴 레이블 처리)
                         title: function(tooltipItems) {
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
+                            // 레이블이 배열이면 공백으로 연결하여 반환
                             if (Array.isArray(label)) {
                                 return label.join(' ');
                             } else {
@@ -289,7 +325,8 @@
             scales: {
                 x: {
                     ticks: {
-                        font: { size: 11 },
+                        font: { size: 11 }, // x축 눈금 폰트 크기
+                        // x축 레이블 콜백 (긴 레이블 처리)
                         callback: function(val, index) {
                             return processChartLabel(this.getLabelForValue(val));
                         }
@@ -297,136 +334,136 @@
                 },
                 y: {
                     ticks: {
-                        font: { size: 11 }
+                        font: { size: 11 } // y축 눈금 폰트 크기
                     }
                 }
             }
         };
 
-        // Chart for Usage Frequency
+        // 1. 생성형 AI 사용 빈도 차트 (도넛 차트)
         const usageFrequencyCtx = document.getElementById('usageFrequencyChart').getContext('2d');
         new Chart(usageFrequencyCtx, {
-            type: 'doughnut',
+            type: 'doughnut', // 도넛 차트 타입
             data: {
                 labels: ['자주 사용한다', '가끔 사용한다', '보통이다', '사용한 적이 있다'],
                 datasets: [{
                     label: '사용 빈도 (%)',
-                    data: [70.6, 11.8, 11.8, 5.9],
-                    backgroundColor: [
+                    data: [70.6, 11.8, 11.8, 5.9], // 데이터 값
+                    backgroundColor: [ // 배경색
                         chartColorsProfessional[0], // Primary Blue
                         chartColorsProfessional[1], // Secondary Teal
                         chartColorsProfessional[2], // Accent Grey
                         chartColorsProfessional[3]  // Supporting Light Blue
                     ],
-                    borderColor: '#FFFFFF',
-                    borderWidth: 2
+                    borderColor: '#FFFFFF', // 테두리 색상
+                    borderWidth: 2 // 테두리 두께
                 }]
             },
             options: {
-                ...commonChartOptions,
+                ...commonChartOptions, // 공통 옵션 상속
                 scales: {
-                    x: { display: false },
-                    y: { display: false }
+                    x: { display: false }, // x축 표시 안 함
+                    y: { display: false }  // y축 표시 안 함
                 }
             }
         });
 
-        // Chart for Learning Helpfulness
+        // 2. 학습 및 과제 수행 도움 정도 차트 (막대 차트)
         const learningHelpfulnessCtx = document.getElementById('learningHelpfulnessChart').getContext('2d');
         new Chart(learningHelpfulnessCtx, {
-            type: 'bar',
+            type: 'bar', // 막대 차트 타입
             data: {
                 labels: ['매우 그렇다', '그렇다', '보통이다', '그렇지 않다'],
                 datasets: [{
                     label: '도움 정도 (%)',
-                    data: [23.5, 58.8, 11.8, 5.9],
-                    backgroundColor: [
+                    data: [23.5, 58.8, 11.8, 5.9], // 데이터 값
+                    backgroundColor: [ // 배경색
                         chartColorsProfessional[0],
                         chartColorsProfessional[1],
                         chartColorsProfessional[2],
                         chartColorsProfessional[3]
                     ],
-                    borderColor: '#FFFFFF',
-                    borderWidth: 1
+                    borderColor: '#FFFFFF', // 테두리 색상
+                    borderWidth: 1 // 테두리 두께
                 }]
             },
             options: {
-                ...commonChartOptions,
+                ...commonChartOptions, // 공통 옵션 상속
                 scales: {
                     y: {
-                        beginAtZero: true,
-                        max: 70,
+                        beginAtZero: true, // y축 0부터 시작
+                        max: 70, // y축 최대값
                         title: {
-                            display: true,
-                            text: '비율 (%)',
-                            font: { size: 12, weight: 'bold' }
+                            display: true, // y축 제목 표시
+                            text: '비율 (%)', // y축 제목 텍스트
+                            font: { size: 12, weight: 'bold' } // y축 제목 폰트
                         }
                     }
                 }
             }
         });
 
-        // Chart for Reliability
+        // 3. 생성형 AI 콘텐츠 신뢰도 차트 (도넛 차트)
         const reliabilityCtx = document.getElementById('reliabilityChart').getContext('2d');
         new Chart(reliabilityCtx, {
-            type: 'doughnut',
+            type: 'doughnut', // 도넛 차트 타입
             data: {
                 labels: ['보통이다', '신뢰하지 않는다', '신뢰한다'],
                 datasets: [{
                     label: '신뢰도 (%)',
-                    data: [58.8, 35.3, 5.9],
-                    backgroundColor: [
+                    data: [58.8, 35.3, 5.9], // 데이터 값
+                    backgroundColor: [ // 배경색
                         chartColorsProfessional[0],
                         chartColorsProfessional[1],
                         chartColorsProfessional[2]
                     ],
-                    borderColor: '#FFFFFF',
-                    borderWidth: 2
+                    borderColor: '#FFFFFF', // 테두리 색상
+                    borderWidth: 2 // 테두리 두께
                 }]
             },
             options: {
-                ...commonChartOptions,
+                ...commonChartOptions, // 공통 옵션 상속
                 scales: {
-                    x: { display: false },
-                    y: { display: false }
+                    x: { display: false }, // x축 표시 안 함
+                    y: { display: false }  // y축 표시 안 함
                 }
             }
         });
 
-        // Chart for Hallucination Awareness
+        // 4. 할루시네이션 현상 인지 여부 차트 (막대 차트)
         const hallucinationAwarenessCtx = document.getElementById('hallucinationAwarenessChart').getContext('2d');
         new Chart(hallucinationAwarenessCtx, {
-            type: 'bar',
+            type: 'bar', // 막대 차트 타입
             data: {
                 labels: ['매우 잘 알고 있다', '알고 있다', '보통이다', '전혀 모른다'],
                 datasets: [{
                     label: '인지 정도 (%)',
-                    data: [35.3, 41.2, 11.8, 11.8],
-                    backgroundColor: [
+                    data: [35.3, 41.2, 11.8, 11.8], // 데이터 값
+                    backgroundColor: [ // 배경색
                         chartColorsProfessional[0],
                         chartColorsProfessional[1],
                         chartColorsProfessional[2],
                         chartColorsProfessional[3]
                     ],
-                    borderColor: '#FFFFFF',
-                    borderWidth: 1
+                    borderColor: '#FFFFFF', // 테두리 색상
+                    borderWidth: 1 // 테두리 두께
                 }]
             },
             options: {
-                ...commonChartOptions,
+                ...commonChartOptions, // 공통 옵션 상속
                 scales: {
                     y: {
-                        beginAtZero: true,
-                        max: 50,
+                        beginAtZero: true, // y축 0부터 시작
+                        max: 50, // y축 최대값
                         title: {
-                            display: true,
-                            text: '비율 (%)',
-                            font: { size: 12, weight: 'bold' }
+                            display: true, // y축 제목 표시
+                            text: '비율 (%)', // y축 제목 텍스트
+                            font: { size: 12, weight: 'bold' } // y축 제목 폰트
                         }
                     }
                 }
             }
         });
     </script>
-    </body>
+</body>
 </html>
